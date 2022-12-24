@@ -81,3 +81,7 @@ app.put("/songs/:id", async (req, res) => {
   }
 });
 
+// Devolviendo HTML
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
