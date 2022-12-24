@@ -40,3 +40,17 @@ app.post("/songs", async (req, res) => {
     res.send({status: 'error', data: 'error interno del servidor'})
   }
 });
+
+//   DELETE
+app.delete("/songs/:id", async (req, res) => {
+  try {
+  const { id } = req.params;
+  const songs = JSON.parse(await fsPromises.readFile("repertorio.json"));
+  const index = songs.findIndex((p) => p.id == id);
+  songs.splice(index, 1);
+  await fsPromises.writeFile("repertorio.json", JSON.stringify(songs));
+  return res.send("Canción eliminada con éxito");
+  } catch (error) {
+    res.send({status: 'error', data: 'Error interno del Servidor'})
+  }
+});
