@@ -1,0 +1,24 @@
+{
+  "name": "desafio-node-express-mi-repertorio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarAcevedo18/node-express-mi-repertorio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarAcevedo18/node-express-mi-repertorio/issues"
+  },
+  "homepage": "https://github.com/OscarAcevedo18/node-express-mi-repertorio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
